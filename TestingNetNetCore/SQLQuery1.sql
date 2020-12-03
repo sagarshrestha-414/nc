@@ -1,0 +1,1 @@
+﻿insert into student ('aarati thapa','thapagaun','54465458','thapa','sixth')

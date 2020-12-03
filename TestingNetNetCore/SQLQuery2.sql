@@ -1,0 +1,1 @@
+﻿insert into Student (StudentName,Address,ContactNumber,Guardian,Semester)values('aarati thapa','thapagaun','54465458','thapa','sixth');

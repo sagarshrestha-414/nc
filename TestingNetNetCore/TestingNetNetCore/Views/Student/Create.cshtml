@@ -1,0 +1,63 @@
+﻿@model StudentModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>AddPerson</h1>
+
+
+@using (Html.BeginForm("Create", "Student", FormMethod.Post))
+{
+
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(x => x.StudentId)
+    <table>
+        <tr>
+            <td colspan="2">
+                Add your Data to create new person Data
+            </td>
+
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.StudentName)</td>
+            <td>
+                @Html.TextBoxFor(x => x.StudentName)
+                @Html.ValidationMessageFor(x => x.StudentName)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.Address)</td>
+            <td>
+                @Html.TextBoxFor(x => x.Address)
+                @Html.ValidationMessageFor(x => x.Address)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.ContactNumber)</td>
+            <td>
+                @Html.TextBoxFor(x => x.ContactNumber)
+                @Html.ValidationMessageFor(x => x.ContactNumber)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.Guardian)</td>
+            <td>
+                @Html.TextBoxFor(x => x.Guardian)
+                @Html.ValidationMessageFor(x => x.Guardian)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.Semester)</td>
+            <td>
+                @Html.TextBoxFor(x => x.Semester)
+                @Html.ValidationMessageFor(x => x.Semester)
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td colspan="2"><button type="submit" class="btn btn-secondary">Add Detail</button></td>
+        </tr>
+    </table>
+}
